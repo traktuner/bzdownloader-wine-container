@@ -34,6 +34,9 @@ ENV APP_NAME="Backblaze Downloader"
 # Disable WINE Debug messages
 ENV WINEDEBUG -all
 
+# Configure wine to run without mono or gecko as they are not required
+ENV WINEDLLOVERRIDES mscoree,mshtml=
+
 EXPOSE 5900
 
 COPY startapp.sh /startapp.sh
