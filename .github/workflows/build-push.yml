@@ -3,8 +3,8 @@ name: Build Docker Images
 on:
   schedule:
     - cron:  '0 0 25 * *'
-#  push:
-#    branches: [ main ]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
@@ -46,6 +46,7 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           file: Dockerfile          
-          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
+          platforms: linux/amd64
+          #,linux/arm64,linux/arm/v7,linux/arm/v6
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}
