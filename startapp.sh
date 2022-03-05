@@ -6,6 +6,9 @@ set -x
     curl -L "https://secure.backblaze.com/api/restore_downloader" --output "bzdownloader.zip"
     unzip bzdownloader.zip
     ls -la
+    echo "Mounting /restore/ as hdd and rebooting wine"
+    ln -s /restore/ /config/wine/dosdevices/d:
+    wineboot
     echo "Starting bzdownloader.exe"
     wine64 "bzdownloader.exe" &
     sleep infinity
