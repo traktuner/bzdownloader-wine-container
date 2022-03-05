@@ -7,6 +7,7 @@ set -x
     unzip bzdownloader.zip
     ls -la
     echo "Mounting /restore/ as hdd and rebooting wine"
+    wineboot
     ln -s /restore/ /config/wine/dosdevices/d:
     wineboot
     echo "Starting bzdownloader.exe"
