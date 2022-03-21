@@ -9,7 +9,7 @@ set -x
     echo "Mounting /restore/ as hdd and rebooting wine"
     wineboot
     ln -s /restore/ /config/wine/dosdevices/d:
-    #wineboot
     echo "Starting bzdownloader.exe"
     wine64 "bzdownloader.exe" &
     sleep infinity
+    
