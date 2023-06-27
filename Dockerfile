@@ -1,4 +1,4 @@
-FROM jlesage/baseimage-gui:ubuntu-20.04
+FROM jlesage/baseimage-gui:ubuntu-22.04
 
 RUN apt-get update && apt-get full-upgrade -y
 
