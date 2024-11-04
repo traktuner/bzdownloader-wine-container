@@ -50,7 +50,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
+          platforms: linux/amd64
           # Note: tags has to be all lower-case
           tags: |
             ghcr.io/traktuner/bzdownloader-wine-container:latest            
