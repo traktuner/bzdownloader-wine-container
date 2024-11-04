@@ -7,7 +7,7 @@ RUN apt-get install -y curl wget software-properties-common gnupg2 winbind xvfb 
 RUN dpkg --add-architecture i386
 RUN wget -nc https://dl.winehq.org/wine-builds/winehq.key
 RUN apt-key add winehq.key
-RUN add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+RUN add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ noble main'
 RUN apt-get update
 RUN apt-get install -y winehq-stable
 
